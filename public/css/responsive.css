@@ -1,0 +1,45 @@
+@media (max-width: 320px) {
+    .header-img {
+        width: 90%;
+    }
+
+    .bg-dark {
+        height: 130px;
+    }
+
+    .left {
+        margin-left: -18% !important;
+    }
+    
+    .right {
+        margin-right: -18% !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .bg-dark {
+        height: 80px;
+    }
+}
+
+@media (min-width: 991px) {
+    .header-img {
+        width: 50%;
+    }
+
+    .slidedown {
+        width: 3%;
+    }
+
+    .about-p {
+        width: 800px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+
+}
+
+.invalid-feedback {
+    display: block !important;
+}
