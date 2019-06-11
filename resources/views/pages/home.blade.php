@@ -3,7 +3,6 @@
 @section('content')
           {{-- site content --}}
           <div class="container site-content">
-            @include('sections.approach')
             @include('sections.2services')
           </div>
           <div class="site-content">

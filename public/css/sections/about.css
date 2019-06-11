@@ -1,0 +1,37 @@
+.about-sec {
+   text-align: center;
+}
+
+.about-img {
+   width: 230px !important;
+   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+   margin-bottom: 40px;
+}
+
+.about-p {
+   margin-bottom: 40px;
+}
+
+.readmore button {
+   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.appraoch {
+    display: block !important;
+}
+
+.left {
+    margin-left: -10% !important;
+    border-top-left-radius: 0 !important;
+}
+
+.right {
+    margin-right: -10% !important;
+    border-top-right-radius: 0 !important;
+}
+
+.left-fas {
+    margin-left: 50px;
+}

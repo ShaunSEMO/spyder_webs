@@ -12,7 +12,15 @@
 */
 
 Route::get('/', function () {
+    return View::make('pages.landing');
+});
+
+Route::get('/home', function () {
     return View::make('pages.home');
+});
+
+Route::get('/need_website', function () {
+    return View::make('pages.need_website');
 });
 
 Route::get('/about', function () {
@@ -23,4 +31,5 @@ Route::get('/blog', function () {
     return View::make('pages.blog');
 });
 
-Route::post('/contact', 'ContactMessageController@store')->name('contact.store');
+Route::get('/yes', 'YesNos@yes');
+Route::get('/no', 'YesNos@no');
