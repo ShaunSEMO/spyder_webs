@@ -15,9 +15,7 @@ Route::get('/', function () {
     return View::make('pages.landing');
 });
 
-Route::get('/home', function () {
-    return View::make('pages.home');
-});
+Route::get('/home', 'HomeController@index');
 
 Route::get('/need_website', function () {
     return View::make('pages.need_website');
@@ -27,9 +25,10 @@ Route::get('/about', function () {
     return View::make('pages.about');
 });
 
-Route::get('/blog', function () {
-    return View::make('pages.blog');
-});
+
+Route::resource('types', 'TypesController');
+
+Route::resource('blog', 'BlogController');
 
 Route::get('/yes', 'YesNos@yes');
 Route::get('/no', 'YesNos@no');

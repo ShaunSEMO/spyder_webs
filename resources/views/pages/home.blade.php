@@ -3,6 +3,8 @@
 @section('content')
           {{-- site content --}}
           <div class="container site-content">
+            @include('sections.typesbrief', $types)
+            <br><br>
             @include('sections.2services')
           </div>
           <div class="site-content">

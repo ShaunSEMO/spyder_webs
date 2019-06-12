@@ -29,7 +29,29 @@
       <div class="header-sec">
 
             {{-- navbar --}}
-            <nav class="navbar navbar-expand-lg static-top">
+            <nav class="navbar navbar-expand-lg">
+
+              <a class="navbar-brand" href="{{ url('home') }}">SW</a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                </ul>
+
+              </div>
 
             </nav>
             {{-- navbar --}}
@@ -37,7 +59,7 @@
             {{-- header content --}}
             <div class="header-content container">
                 <img src="{{ asset('img/s_wlogo2.png') }}" class="img-fluid header-each header-img" alt="Responsive image">
-                <h5 class="subhead">Your online presence is our main priority</h5>
+                <h5 class="subhead">What kind of website would you like?</h5>
                 <img src="{{ asset('img/slidedown.png') }}" class="img-fluid header-each slidedown" alt="Responsive image">
             </div>
             {{-- header content --}}
@@ -46,6 +68,8 @@
 
       @yield('about')
       @yield('content')
+      @yield('types')
+      @yield('blog')
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
