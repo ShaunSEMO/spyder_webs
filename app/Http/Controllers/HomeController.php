@@ -11,7 +11,8 @@ class HomeController extends Controller
 {
     public function index(){
 
-      $types = $results = DB::select('select * from types limit 3');
-      return view('pages.home')->with('types', $types);
+      $types = DB::select('select * from types limit 3');
+      $posts = DB::select('select * from posts limit 3');
+      return view('pages.home', compact(['types','posts']));
     }
 }

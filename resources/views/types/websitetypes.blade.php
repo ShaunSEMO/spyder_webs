@@ -8,7 +8,7 @@
       <img class="img-fluid" src="{{ $type->image }}" alt="Type of website">
       <h1>{{ $type->title }}</h1>
       <p>{{ $type->body }}</p>
-      <button type="button" class="btn btn-primary">Select</button>
+      <a href="{{ url('/types/'.$type->id) }}"><button type="button" class="btn btn-primary">Select</button></a>
       <br><br>
     </div>
     @endforeach

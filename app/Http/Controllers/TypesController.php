@@ -15,7 +15,7 @@ class TypesController extends Controller
     public function index()
     {
         $types = Type::all();
-        return view('pages.websitetypes')->with('types', $types);
+        return view('types.websitetypes')->with('types', $types);
     }
 
     /**
@@ -47,7 +47,8 @@ class TypesController extends Controller
      */
     public function show($id)
     {
-        //
+      $types = Type::find($id);
+      return view('types.showtypes')->with('types', $types);
     }
 
     /**

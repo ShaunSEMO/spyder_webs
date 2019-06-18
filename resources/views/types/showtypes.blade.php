@@ -59,19 +59,31 @@
             {{-- header content --}}
             <div class="header-content container">
                 <img src="{{ asset('img/s_wlogo2.png') }}" class="img-fluid header-each header-img" alt="Responsive image">
-                <h5 class="subhead">What kind of website would you like?</h5>
+                <h5 class="subhead">So you would like a {{ $types->title }}?</h5>
                 <img src="{{ asset('img/slidedown.png') }}" class="img-fluid header-each slidedown" alt="Responsive image">
             </div>
             {{-- header content --}}
+      </div>
+      <!-- header section -->
 
+      <div class="container">
+        <br>
+        <img class="img-fluid" src="{{ asset($types->image) }}" alt="Type of website">
+        <h1>{{ $types->title }}</h1>
+        <p>{{ $types->body }}</p>
       </div>
 
-      @yield('about')
-      @yield('content')
-      @yield('types')
-      @yield('blog')
-      @yield('show')
-      @yield('create')
+
+      <div class="site-content">
+        <br><br>
+        @include('sections.3pricing')
+      </div>
+
+
+      <h1>Let's discuss about your website</h1>
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

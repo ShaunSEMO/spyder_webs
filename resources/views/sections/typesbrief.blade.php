@@ -4,7 +4,7 @@
     <img class="img-fuid img-thumbnail" src="{{ $type->image }}" alt="Type of website.">
     <h1>{{ $type->title }}</h1>
     <p>{{ $type->body }}</p>
-    <button type="button" class="btn btn-primary">Select</button>
+    <a href="{{ url('/types/'.$type->id) }}"><button type="button" class="btn btn-primary">Select</button></a>
   </div>
 @endforeach
   <br><br>

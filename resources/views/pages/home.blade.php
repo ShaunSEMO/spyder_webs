@@ -11,9 +11,9 @@
             <br><br>
             @include('sections.3pricing')
             <br><br>
-            @include('sections.1about')
-            <br><br>
             @include('sections.4blog')
+            <br><br>
+            @include('sections.1about')
             <br><br>
             @include('sections.5contact')
           </div>

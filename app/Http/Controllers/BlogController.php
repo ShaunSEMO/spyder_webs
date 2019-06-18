@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Type;
+use App\Post;
+use DB;
 
 class BlogController extends Controller
 {
@@ -14,8 +15,11 @@ class BlogController extends Controller
      */
     public function index()
     {
-      $posts = Post::all();
-      return view('pages.blog')->with('posts', $posts);
+      // $posts = Post::paginate(4);
+      $posts = DB::table('posts')->paginate(4);
+      // $post_excerpts = DB::table('posts')->str_limit(body, 10,'...');
+
+      return view('blog.blog', compact(['posts']));
     }
 
     /**
@@ -25,7 +29,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blog.create');
     }
 
     /**
@@ -47,7 +51,8 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+      $posts = Post::find($id);
+      return view('blog.show', compact(['posts']));
     }
 
     /**
