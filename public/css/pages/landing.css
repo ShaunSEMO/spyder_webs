@@ -1,0 +1,30 @@
+/* body {
+  display: none;
+} */
+
+.buttonss {
+  text-align: center;
+}
+
+.yes-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 120px !important;
+  height: 100px !important;
+  border: none;
+  font-size: 60px;
+  color: darkcyan;
+  border-radius: 10%;
+  display: inline-block !important;
+}
+
+.no-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 120px !important;
+  height: 100px !important;
+  border: none;
+  font-size: 60px;
+  color: red;
+  border-radius: 10%;
+  margin-left: 10%;
+  display: inline-block !important;
+}

@@ -12,7 +12,7 @@
 
     {{-- Custom css --}}
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/need_website.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/pages/need_website.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -37,11 +37,14 @@
                   <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="{{ url('about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="{{ url('types') }}">Types Of Websites</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('blog') }}">Blog</a>
+                  </li>
               </ul>
 
             </div>
@@ -57,12 +60,14 @@
             <img src="{{ asset('img/slidedown.png') }}" class="img-fluid header-each slidedown" alt="Responsive image">
             <br>
             <br>
-            <video width="320" height="240" controls>
+            <video width="300" height="220" controls>
               <source src="movie.mp4" type="video/mp4">
               Your browser does not support the video tag, but you need a website!
             </video>
             <br>
-            <a href="{{ url('home') }}"><button type="button" class="btn btn-primary">Get a website!</button></a>
+            <br>
+            <a href="{{ url('home') }}"><button type="button" class="btn btn-primary getsite">Get a website!</button></a>
+            <br><br>
           </div>
           {{-- header content --}}
 

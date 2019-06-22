@@ -17,6 +17,7 @@
     <link href="{{ asset('css/sections/services.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sections/pricing.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sections/contact.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/pages/showtypes.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
     <!-- JS -->
@@ -39,17 +40,20 @@
 
               <div class="collapse navbar-collapse" id="navbarNav">
 
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                </ul>
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ url('about') }}">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ url('types') }}">Types Of Websites</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ url('blog') }}">Blog</a>
+                        </li>
+                    </ul>
 
               </div>
 
@@ -66,10 +70,13 @@
       </div>
       <!-- header section -->
 
-      <div class="container">
+      <div class="type container">
         <br>
         <img class="img-fluid" src="{{ asset($types->image) }}" alt="Type of website">
+        <br>
+        <br>
         <h1>{{ $types->title }}</h1>
+        <br>
         <p>{{ $types->body }}</p>
       </div>
 
@@ -78,9 +85,67 @@
         <br><br>
         @include('sections.3pricing')
       </div>
+      
 
+      <div class="enquiry">
+        
+        <h1 class="sec-header">Let's discuss about your website</h1>
+        <hr class="sh-uline">
+        
+        <br><br>
 
-      <h1>Let's discuss about your website</h1>
+        <div class="container">
+            <form action="https://formspree.io/info@spyderwebs.co.za " method="POST">
+              {{ csrf_field() }}
+              <div class="form-group">
+                      @if (Session::has('file_message'))
+                          <div class="alert alert-success" role="alert">
+                              {{Session::get('file_message')}}
+                          </div>
+                      @endif
+                      <p>Domain name</p>
+                      <input name="domain" type="name" class="form-control" id="exampleFormControlInput1" placeholder="www.yourdomain.com">
+                      @if ($errors->has('domain'))
+                          <small class="form-text invalid-feedback">{{ $errors->first('name') }}</small>
+                      @endif
+                      <br>
+                      <p>Would you like a business E-mail?</p>
+                      <p>E.g info@yourdomain.com</p>
+                      <small>Included in silver and gold package</small>
+                      <br>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="Business E-mail" value="yes">
+                          <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="Business E-mail" id="inlineRadio2" value="No">
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                      <br>
+                      <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Is there anything else you would like to have on your website?"></textarea>
+                      @if ($errors->has('message'))
+                          <small class="form-text invalid-feedback">{{ $errors->first('message') }}</small>
+                      @endif
+                      <br>
+                      <input name="fullname" type="name" class="form-control" id="exampleFormControlInput1" placeholder="Full name">
+                      @if ($errors->has('email'))
+                          <small class="form-text invalid-feedback">{{ $errors->first('email') }}</small>
+                      @endif
+                      <br>
+                      <input name="email" type="name" class="form-control" id="exampleFormControlInput1" placeholder="E-mail">
+                      @if ($errors->has('email'))
+                          <small class="form-text invalid-feedback">{{ $errors->first('email') }}</small>
+                      @endif
+                      <br>
+                      <button type="submit" class="btn btn-danger">Submit</button>
+              </div>
+            </form>
+        </div>
+        
+
+        <br><br>
+      </div>
+      
 
 
 

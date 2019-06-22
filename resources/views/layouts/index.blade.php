@@ -17,6 +17,8 @@
     <link href="{{ asset('css/sections/services.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sections/pricing.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sections/contact.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/sections/blog.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/sections/typesbrief.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
     <!-- JS -->
@@ -24,6 +26,8 @@
     <title>Spyder_Webs</title>
   </head>
   <body id='body'>
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.3"></script>
 
       {{-- header section --}}
       <div class="header-sec">
@@ -39,17 +43,20 @@
 
               <div class="collapse navbar-collapse" id="navbarNav">
 
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                </ul>
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ url('about') }}">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ url('types') }}">Types Of Websites</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ url('blog') }}">Blog</a>
+                        </li>
+                    </ul>
 
               </div>
 
@@ -59,7 +66,7 @@
             {{-- header content --}}
             <div class="header-content container">
                 <img src="{{ asset('img/s_wlogo2.png') }}" class="img-fluid header-each header-img" alt="Responsive image">
-                <h5 class="subhead">What kind of website would you like?</h5>
+                <br><br>
                 <img src="{{ asset('img/slidedown.png') }}" class="img-fluid header-each slidedown" alt="Responsive image">
             </div>
             {{-- header content --}}

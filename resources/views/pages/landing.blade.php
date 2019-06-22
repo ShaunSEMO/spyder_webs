@@ -12,9 +12,11 @@
 
     {{-- Custom css --}}
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/pages/landing.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+    <script src="{{ asset('js/landing.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
   </head>
   <body>
@@ -37,11 +39,14 @@
                   <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="{{ url('about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="{{ url('types') }}">Types Of Websites</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('blog') }}">Blog</a>
+                  </li>
               </ul>
 
             </div>
@@ -54,18 +59,11 @@
 
               <img src="{{ asset('img/s_wlogo2.png') }}" class="img-fluid header-each header-img" alt="Responsive image">
               <h5 class="subhead">Would you like a website??</h5>
-
-              <div class="container">
-                <div class="row">
-
-                  <div class="col-xs-6">
-                    <a href="{{ url('yes') }}"><button type="button" class="btn btn-success">Yes!</button></a>
-                  </div>
-
-                  <div class="col-xs-6">
-                    <a href="{{ url('no') }}"><button type="button" class="btn btn-danger">No!</button></a>
-                  </div>
-
+              <br>
+              <br>
+              <div class="container buttonss">
+                    <a href="{{ url('yes') }}"><button type="button" class="yes-btn">Yes</button></a>
+                    <a href="{{ url('no') }}"><button type="button" class="no-btn ">No</button></a>
                 </div>
               </div>
 
